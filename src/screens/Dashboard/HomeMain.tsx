@@ -24,12 +24,12 @@ const HomeMain = () => {
   };
 
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-white">
       <Dashboard text="Dashboard" />
       <ScrollView className="px-4 flex-1">
         <WaterStats />
         <WeeklyOverview />
-        <Text className="text-black text-lg font-semibold my-4">
+        <Text className="text-black text-lg font-bold my-4">
           Today's Record
         </Text>
         {records.map((record, index) => (

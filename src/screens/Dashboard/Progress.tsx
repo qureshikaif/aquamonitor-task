@@ -31,7 +31,7 @@ const Progress = () => {
   };
 
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-white">
       <Dashboard text="Progress & Statistics" />
       <ScrollView className="px-4 flex-1">
         <WaterStats />
