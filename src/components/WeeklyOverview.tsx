@@ -1,5 +1,4 @@
 import {View, Text, Image} from 'react-native';
-import React from 'react';
 
 const Chevron = require('../assets/images/icons/chevron-right.png');
 
