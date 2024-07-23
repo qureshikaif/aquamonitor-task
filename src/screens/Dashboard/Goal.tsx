@@ -12,25 +12,27 @@ const Goal = () => {
       <Dashboard text="Goal Set" />
       <View className="my-4 px-4">
         <View className="flex flex-row justify-between items-center border border-gray-300 rounded-lg p-2 my-2">
-          <View className="flex flex-row items-center">
+          <View className="flex flex-row items-center justify-between">
             <Image source={GoalIcon} className="w-6 h-6 mr-2 ml-3" />
             <TextInput
-              className="text-black text-left"
+              className="text-black text-left flex-1"
               placeholder="Set Goal/Target"
               keyboardType="numeric"
               placeholderTextColor={'gray'}
             />
+            <Text className="text-black mr-4">ml</Text>
           </View>
         </View>
         <View className="flex flex-row justify-between items-center border border-gray-300 rounded-lg p-2 my-2">
           <View className="flex flex-row items-center">
             <Image source={Intake} className="w-6 h-6 mr-2 ml-3" />
             <TextInput
-              className="text-black"
+              className="text-black flex-1"
               placeholder="Intake per time"
               keyboardType="numeric"
               placeholderTextColor={'gray'}
             />
+            <Text className="text-black mr-4">ml</Text>
           </View>
         </View>
         <View className="flex flex-row justify-between">

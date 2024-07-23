@@ -2,6 +2,9 @@ import {View, Text, Image, Dimensions} from 'react-native';
 import {BarChart} from 'react-native-chart-kit';
 import {ChartConfig} from 'react-native-chart-kit/dist/HelperTypes';
 const Chevron = require('../assets/images/icons/chevron-right.png');
+
+const DownArrow = require('../assets/images/icons/down-arrow.png');
+
 const WeeklyOverview = () => {
   const screenWidth = Dimensions.get('window').width;
   const chartData = {
@@ -30,7 +33,12 @@ const WeeklyOverview = () => {
   };
   return (
     <View className="border border-gray-300 rounded-md p-4">
-      <Text className="text-lg font-semibold text-black">Weekly Overview</Text>
+      <View className="flex flex-row items-center space-x-1">
+        <Text className="text-lg font-semibold text-black">
+          Weekly Overview
+        </Text>
+        <Image source={DownArrow} />
+      </View>
       <Text className="text-black">
         It is a long established fact that a reader will be distracted by the
         readable

@@ -30,7 +30,7 @@ const Weight = () => {
             It is a long established fact that a reader will be distracted by
             the readable
           </Text>
-          <View className="flex justify-center py-32">
+          <View className="flex justify-center py-24">
             <View className="mx-auto">
               <Pressable className="border border-[#D9D9D9] bg-[#F8F8F8] p-5 rounded-md w-28">
                 <Image source={WeightIcon} />

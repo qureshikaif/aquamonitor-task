@@ -33,7 +33,7 @@ const SleepRoutine: React.FC = () => {
             It is a long established fact that a reader will be distracted by
             the readable
           </Text>
-          <View className="flex flex-row justify-between px-6 py-32 space-x-6">
+          <View className="flex flex-row justify-between px-6 py-24 space-x-6">
             <View className="flex">
               <Pressable className="border border-[#D9D9D9] bg-[#F8F8F8] p-4 h-32 rounded-md">
                 <Image source={Wakeup} />
