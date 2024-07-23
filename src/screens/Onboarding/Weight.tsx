@@ -43,6 +43,7 @@ const Weight = () => {
             />
           </View>
           <Pressable
+            android_ripple={{color: '#0168DD'}}
             className="bg-[#0188DD] text-white text-center rounded-md p-3 my-4 flex items-center justify-center"
             onPress={() => navigation.navigate('SleepRoutine')}>
             <Text className="font-semibold text-lg text-white">Next</Text>

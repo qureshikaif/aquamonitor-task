@@ -1,17 +1,25 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  InputModeOptions,
+} from 'react-native';
 
 type CustomTextInputProps = {
   label: string;
   required?: boolean;
   placeholder: string;
   secureTextEntry?: boolean;
+  inputMode?: InputModeOptions;
 };
 
 const CustomTextInput = ({
   label,
   placeholder,
   secureTextEntry,
+  inputMode,
 }: CustomTextInputProps) => {
   return (
     <View style={styles.container}>
@@ -23,6 +31,8 @@ const CustomTextInput = ({
           </Text>
         </View>
         <TextInput
+          inputMode={inputMode}
+          autoCapitalize="none"
           style={styles.input}
           placeholder={placeholder}
           secureTextEntry={secureTextEntry}

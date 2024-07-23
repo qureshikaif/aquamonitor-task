@@ -24,11 +24,15 @@ const Login = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView className="flex-grow">
         <View className="bg-white h-screen p-4">
-          <Text className="text-black font-semibold text-2xl my-12">
+          <Text className="text-black font-semibold text-xl my-12">
             Hi, Welcome to AquaMonitor
           </Text>
           <Image source={LoginImage} className="mx-auto mb-8 w-36 h-36" />
-          <CustomTextInput label="Email" placeholder="Enter your email" />
+          <CustomTextInput
+            inputMode="email"
+            label="Email"
+            placeholder="Enter your email"
+          />
           <View className="h-8" />
           <CustomTextInput
             label="Password"
@@ -44,11 +48,12 @@ const Login = () => {
               />
               <Text className="text-gray-600">Remember Me</Text>
             </View>
-            <Text className="text-blue-500 font-semibold text-sm">
+            <Text className="text-blue-500 font-semibold text-sm mt-1">
               Forgot Password?
             </Text>
           </View>
           <Pressable
+            android_ripple={{color: '#0168DD'}}
             className="bg-blue-500 text-white text-center rounded-md p-3 my-4 flex items-center justify-center"
             onPress={() => navigation.navigate('Gender')}>
             <Text className="font-semibold text-lg text-white">Log in</Text>
