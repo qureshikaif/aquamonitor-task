@@ -1,7 +1,7 @@
-import {View, Text, Image, Pressable, TextInput} from 'react-native';
-import React from 'react';
+import {View, Text, Image, Pressable} from 'react-native';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {OnboardingType} from '../../navigation/types/OnboardingType';
+import CustomTextInput from '../../components/CustomTextInput';
 
 const LoginImage = require('../../assets/images/login.png');
 
@@ -13,16 +13,12 @@ const Login = () => {
         Hi, Welcome to AquaMonitor
       </Text>
       <Image source={LoginImage} className="mx-auto mb-8 w-36 h-36" />
-      <TextInput
-        className="border border-gray-300 rounded-md p-4 my-2 text-black"
-        placeholder="Enter your email"
-        placeholderTextColor={'gray'}
-      />
-      <TextInput
-        className="border border-gray-300 rounded-md p-4 my-2 text-black"
+      <CustomTextInput label="Email" placeholder="Enter your email" />
+      <View className="h-8" />
+      <CustomTextInput
+        label="Password"
         placeholder="Enter your password"
-        placeholderTextColor={'gray'}
-        secureTextEntry={true}
+        secureTextEntry
       />
       <View className="flex flex-row justify-between my-2">
         <View className="flex flex-row items-center">
