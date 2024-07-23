@@ -1,12 +1,15 @@
+import React, {useState} from 'react';
 import {View, Text, Image, Pressable} from 'react-native';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {OnboardingType} from '../../navigation/types/OnboardingType';
-import CustomTextInput from '../../components/CustomTextInput';
+import CustomTextInput from '../../components/ui/CustomTextInput';
+import CheckBox from '@react-native-community/checkbox';
 
 const LoginImage = require('../../assets/images/login.png');
 
 const Login = () => {
   const navigation = useNavigation<NavigationProp<OnboardingType>>();
+  const [toggleCheckBox, setToggleCheckBox] = useState(false);
   return (
     <View className="bg-white h-screen p-4">
       <Text className="text-black font-semibold text-2xl my-12">
@@ -21,9 +24,13 @@ const Login = () => {
         secureTextEntry
       />
       <View className="flex flex-row justify-between my-2">
-        <View className="flex flex-row items-center">
-          {/* <CheckBox value={false} /> */}
-          <Text className="ml-2 text-gray-600">Remember Me</Text>
+        <View className="flex flex-row items-center -ml-1">
+          <CheckBox
+            value={toggleCheckBox}
+            onValueChange={newValue => setToggleCheckBox(newValue)}
+            tintColors={{true: '#0188DD', false: '#D9D9D9'}}
+          />
+          <Text className="text-gray-600">Remember Me</Text>
         </View>
         <Text className="text-blue-500 font-semibold text-sm">
           Forgot Password?
