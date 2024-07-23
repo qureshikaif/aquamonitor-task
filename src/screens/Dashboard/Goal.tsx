@@ -1,4 +1,4 @@
-import {View, TextInput, Image} from 'react-native';
+import {View, TextInput, Image, Pressable, Text} from 'react-native';
 import Dashboard from '../../components/StatusBar/Dashboard';
 
 const GoalIcon = require('../../assets/images/icons/goal.png');
@@ -60,6 +60,9 @@ const Goal = () => {
             multiline
           />
         </View>
+        <Pressable className="bg-blue-500 text-white text-center rounded-md p-3 my-4 flex items-center justify-center">
+          <Text className="font-semibold text-base text-white">Set Goal</Text>
+        </Pressable>
       </View>
     </View>
   );

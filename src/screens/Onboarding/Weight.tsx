@@ -19,11 +19,11 @@ const Weight = () => {
       </Text>
       <View className="flex flex-row justify-center py-32">
         <View>
-          <Pressable className="border border-[#D9D9D9] p-5 rounded-md">
+          <Pressable className="border border-[#D9D9D9] bg-[#F8F8F8] p-5 rounded-md">
             <Image source={WeightIcon} />
           </Pressable>
           <TextInput
-            className="text-black text-center text-base font-semibold border border-[#D9D9D9]"
+            className="text-black text-center text-base font-semibold border border-[#D9D9D9] bg-[#F8F8F8]"
             placeholder="60 KG"
             placeholderTextColor={'gray'}
           />

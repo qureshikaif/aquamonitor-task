@@ -20,7 +20,7 @@ const Gender = () => {
       </Text>
       <View className="flex flex-row justify-between px-12 py-32">
         <View className="flex">
-          <Pressable className="border border-[#D9D9D9] p-4 rounded-md">
+          <Pressable className="border border-[#D9D9D9] bg-[#F8F8F8] p-4 rounded-md">
             <Image source={Male} />
           </Pressable>
           <Text className="text-black text-center text-base font-semibold">
@@ -28,7 +28,7 @@ const Gender = () => {
           </Text>
         </View>
         <View>
-          <Pressable className="border border-[#D9D9D9] p-5 rounded-md">
+          <Pressable className="border border-[#D9D9D9] bg-[#F8F8F8] p-5 rounded-md">
             <Image source={Female} />
           </Pressable>
           <Text className="text-black text-center text-base font-semibold">
