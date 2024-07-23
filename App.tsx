@@ -1,11 +1,11 @@
 import React from 'react';
-import Weight from './src/screens/Profile/Weight';
 import {NavigationContainer} from '@react-navigation/native';
+import {OnboardingStack} from './src/navigation/stacks/OnboardingStack';
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <Weight />
+      <OnboardingStack />
     </NavigationContainer>
   );
 }

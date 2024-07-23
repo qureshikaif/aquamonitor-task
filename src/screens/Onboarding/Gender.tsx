@@ -1,10 +1,13 @@
 import {View, Text, Image, Pressable} from 'react-native';
 import Onboarding from '../../components/StatusBar/Onboarding';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {OnboardingType} from '../../navigation/types/OnboardingType';
 
 const Male = require('../../assets/images/male.png');
 const Female = require('../../assets/images/female.png');
 
 const Gender = () => {
+  const navigation = useNavigation<NavigationProp<OnboardingType>>();
   return (
     <View className="bg-white h-screen p-4">
       <Onboarding />
@@ -35,7 +38,7 @@ const Gender = () => {
       </View>
       <Pressable
         className="bg-[#0188DD] text-white text-center rounded-md p-3 my-4 flex items-center justify-center"
-        onPress={() => console.log('Login button pressed')}>
+        onPress={() => navigation.navigate('Weight')}>
         <Text className="font-semibold text-lg text-white">Next</Text>
       </Pressable>
     </View>

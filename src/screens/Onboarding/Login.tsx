@@ -1,9 +1,12 @@
 import {View, Text, Image, Pressable, TextInput} from 'react-native';
 import React from 'react';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {OnboardingType} from '../../navigation/types/OnboardingType';
 
 const LoginImage = require('../../assets/images/login.png');
 
 const Login = () => {
+  const navigation = useNavigation<NavigationProp<OnboardingType>>();
   return (
     <View className="bg-white h-screen p-4">
       <Text className="text-black font-semibold text-2xl my-12">
@@ -32,7 +35,7 @@ const Login = () => {
       </View>
       <Pressable
         className="bg-blue-500 text-white text-center rounded-md p-3 my-4 flex items-center justify-center"
-        onPress={() => console.log('Login button pressed')}>
+        onPress={() => navigation.navigate('Gender')}>
         <Text className="font-semibold text-lg text-white">Log in</Text>
       </Pressable>
       <View className="flex flex-row items-center justify-center my-4">
