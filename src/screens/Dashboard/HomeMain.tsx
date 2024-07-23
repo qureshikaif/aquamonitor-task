@@ -7,17 +7,23 @@ import WaterStats from '../../components/WaterStats';
 
 const Bottle = require('../../assets/images/icons/bottle.png');
 
-const records = [
+interface Record {
+  amount: string;
+  time: string;
+  completed: boolean;
+}
+
+const records: Record[] = [
   {amount: '100ml', time: '08:35 pm', completed: true},
   {amount: '50ml', time: '06:00 pm', completed: true},
 ];
 
-const HomeMain = () => {
-  const [checkboxStates, setCheckboxStates] = useState(
+const HomeMain: React.FC = () => {
+  const [checkboxStates, setCheckboxStates] = useState<boolean[]>(
     records.map(record => record.completed),
   );
 
-  const handleCheckboxChange = (index, value) => {
+  const handleCheckboxChange = (index: number, value: boolean) => {
     const newCheckboxStates = [...checkboxStates];
     newCheckboxStates[index] = value;
     setCheckboxStates(newCheckboxStates);

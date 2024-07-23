@@ -6,7 +6,13 @@ import CheckBox from '@react-native-community/checkbox';
 
 const Bottle = require('../../assets/images/icons/bottle.png');
 
-const records = [
+interface Record {
+  amount: string;
+  time: string;
+  completed: boolean;
+}
+
+const records: Record[] = [
   {amount: '20ml', time: '08:35 pm', completed: false},
   {amount: '30ml', time: '08:35 pm', completed: false},
   {amount: '80ml', time: '08:35 pm', completed: false},
@@ -19,12 +25,12 @@ const records = [
   {amount: '50ml', time: '06:00 pm', completed: true},
 ];
 
-const Progress = () => {
-  const [checkboxStates, setCheckboxStates] = useState(
+const Progress: React.FC = () => {
+  const [checkboxStates, setCheckboxStates] = useState<boolean[]>(
     records.map(record => record.completed),
   );
 
-  const handleCheckboxChange = (index, value) => {
+  const handleCheckboxChange = (index: number, value: boolean) => {
     const newCheckboxStates = [...checkboxStates];
     newCheckboxStates[index] = value;
     setCheckboxStates(newCheckboxStates);
