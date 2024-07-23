@@ -56,6 +56,7 @@ const HomeMain: React.FC = () => {
             </View>
           </View>
         ))}
+        <View className="h-16" />
       </ScrollView>
     </View>
   );

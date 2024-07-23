@@ -68,6 +68,7 @@ const Progress: React.FC = () => {
             </View>
           </View>
         ))}
+        <View className="h-16" />
       </ScrollView>
     </View>
   );
